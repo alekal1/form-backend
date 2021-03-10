@@ -14,9 +14,9 @@ public class CategoryInit {
     @Bean
     CommandLineRunner categoryCommandLineRunner(CategoryRepository categoryRepository) {
         return args -> {
-            CategoryDto cat1 = new CategoryDto("TestCategory");
-            CategoryDto cat2 = new CategoryDto("TestCategory2");
-            CategoryDto cat3 = new CategoryDto("TestCategory3");
+            CategoryDto cat1 = new CategoryDto("Pets");
+            CategoryDto cat2 = new CategoryDto("Cosmetics");
+            CategoryDto cat3 = new CategoryDto("Food");
             categoryRepository.saveAll(
                     List.of(cat1, cat2, cat3)
             );

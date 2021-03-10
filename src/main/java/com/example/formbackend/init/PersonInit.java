@@ -19,10 +19,10 @@ public class PersonInit {
             ) {
         return args -> {
             PersonDto foo = new PersonDto(
-                    "testFirstName",
-                    "testLastName",
-                    "testEmail",
-                    "testText",
+                    "Alex",
+                    "Bob",
+                    "bob@bar.com",
+                    "Comment text from Alex",
                     List.of(
                             categoryRepository.findCategoryById(1L),
                             categoryRepository.findCategoryById(2L)
@@ -30,11 +30,26 @@ public class PersonInit {
             );
 
             PersonDto bar = new PersonDto(
-                    "testFirstName",
-                    "testLastName",
-                    "testEmail",
-                    "testText",
+                    "Alice",
+                    "Smith",
+                    "alice@foo.com",
+                    "Comment text from Alice",
                     List.of(
+                            categoryRepository.findCategoryById(1L),
+                            categoryRepository.findCategoryById(2L),
+                            categoryRepository.findCategoryById(3L)
+
+                    )
+            );
+
+            PersonDto faz = new PersonDto(
+                    "Juan",
+                    "Shmidt",
+                    "juan@faz.com",
+                    "Comment text from Juan",
+                    List.of(
+                            categoryRepository.findCategoryById(1L),
+                            categoryRepository.findCategoryById(2L),
                             categoryRepository.findCategoryById(3L)
 
                     )
