@@ -6,12 +6,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.List;
 
 import static com.example.formbackend.constance.C.PERSON_SEQUENCE;
 import static com.example.formbackend.constance.C.DEFAULT_ALLOCATIONSIZE;
 
+/***
+ * Data transfer object represent prototype of object in table of database
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,27 +35,21 @@ public class PersonDto {
     private String lastName;
     private String email;
     private String text;
-
-    @ManyToMany
-    private List<CategoryDto> categories;
-
-    @Transient
     private String postedDate;
+    private String categories;
 
-
-    public LocalDate getPostedDate() {
-        return LocalDate.now();
-    }
 
     public PersonDto(String firstName,
                      String lastName,
                      String email,
                      String text,
-                     List<CategoryDto> categories) {
+                     String categories,
+                     String postedDate) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.text = text;
         this.categories = categories;
+        this.postedDate = postedDate;
     }
 }

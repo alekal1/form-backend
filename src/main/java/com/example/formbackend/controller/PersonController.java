@@ -7,7 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin("*")
+/***
+ * Person controller to handle requests method
+ */
+
+@CrossOrigin("*") // To make requests acceptable with front end on localhost
 @RestController
 @RequestMapping(path = "api/v1/person")
 public class PersonController {

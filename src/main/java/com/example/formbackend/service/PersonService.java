@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/***
+ * Service class for business logic in a different layers
+ */
 @Service
 public class PersonService {
     private final PersonRepository personRepository;
