@@ -9,7 +9,7 @@ Front-end repository could be founded [here](https://github.com/alekal1/form-fro
   * **Maven** - Project management
   * **Spring Boot** - Stand-alone, production-grade Spring based Applications
   * **PostgreSQL** - Database
-  * **Lombok** - Build tool, automate your logging variables
+  * **Lombok** - Build tool, automate logging variables
   * **JPA** - Programming interface specification that describes the management of relational data in enterprise Java applications.
   * **JUnit** - Unit testing framework
 
