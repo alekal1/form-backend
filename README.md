@@ -28,6 +28,13 @@ Front-end repository could be founded [here](https://github.com/alekal1/form-fro
   * To check that out go to `localhost:8080/api/v1/person/all` and you will see a json objects of two persons
 
 
+## END Points
+
+* `/api/v1/person/all` - returns all persons from database
+* `/api/v1/person/add` - add person into database
+* `/api/v1/person/delete/{firstName}` - delete person from database according to first name
+
+
 ## What could be better?
 
 * Could add Docker configuration, so both front and back will run on Docker container.
