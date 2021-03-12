@@ -3,6 +3,7 @@ package com.example.formbackend.controller;
 import com.example.formbackend.dto.PersonDto;
 import com.example.formbackend.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,5 +32,11 @@ public class PersonController {
     @PostMapping("/add")
     public void addNewPerson(@RequestBody PersonDto personDto) {
         personService.addNewPerson(personDto);
+    }
+
+    @Transactional
+    @DeleteMapping("/delete/{firstName}")
+    public void deletePerson(@PathVariable String firstName) {
+        personService.deletePerson(firstName);
     }
 }

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /***
  * Service class for business logic in a different layers
@@ -26,4 +27,10 @@ public class PersonService {
     public void addNewPerson(PersonDto personDto) {
         personRepository.save(personDto);
     }
+
+    public void deletePerson(String firstName) {
+        personRepository.deleteByFirstName(firstName);
+    }
+
+
 }
